@@ -21,13 +21,13 @@ bot.on('message', message=> {
     }
     
     if (message.content === prefix + "invite"){
-        var embed = newDiscord.RichEmbed()
-        .setTitle("Discord Akihito")
-        .setDescription("Voici le lien du discord")
-        .addFiel(".help","Page d'aide", true)
-        .addFiel("Embed01","Embed 01 ! Pour avoir des informations ou une aide [Discord Akihito](https://discord.gg/VxCb2pm)", true)
-        .setColor("0xFF0000")
-        .setFooter("Bievenue à vous ! ")
-        message.channel.sendEmbed(embed);
+        var embed = new Discord.RichEmbed()
+            .setTitle("Discord Akihito")
+            .setDescription("Voici le lien du discord")
+            .addFiel(".help","Page d'aide", true)
+            .addFiel("Discord Akihito","Pour avoir des informations ou une aide [Discord Akihito](https://discord.gg/VxCb2pm)", true)
+            .setColor("0xFF0000")
+            .setFooter("Bievenue à vous ! ")
+        message.channel.sendEmbed(invite);
     }
 });
