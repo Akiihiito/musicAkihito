@@ -15,8 +15,8 @@ bot.on('message', message=> {
         message.channel.sendMessage("Liste des commandes: \n -*help");
     }
 
-    if (message.content === "Bienvenue"){
-        message.reply("Je te souhaite la bienvenue ");
-        console.log("Commande Salut effectué");
+    if (message.content === prefix + "fabriquant"){
+        message.reply("_Ce bot a été crée par Akihito_");
+        console.log("Commande fabriquant éfféctué");
     }
 });
