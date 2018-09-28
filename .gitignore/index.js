@@ -12,22 +12,20 @@ bot.login("NDk0ODMzNzU2MzMxNTczMjQ4.Do5mlg.GPJBcRzqkUc7SvMXQl857B_Gv_w");
 
 bot.on('message', message=> {
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Liste des commandes: \n *help \n *fabriquant");
-    
+        message.channel.sendMessage("Liste des commandes: \n *help \n *fabriquant \n *invite");
+    }
 
     if (message.content === prefix + "fabriquant"){
         message.reply("_Ce bot a été crée par Akihito_");
         console.log("Commande fabriquant éfféctué");
     }
-    
     if (message.content === prefix + "invite"){
         var embed = new Discord.RichEmbed()
             .setTitle("Discord Akihito")
-            .setDescription("Voici le lien du discord")
-            .addFiel(".help","Page d'aide", true)
-            .addFiel("Discord Akihito","Pour avoir des informations ou une aide [Discord Akihito](https://discord.gg/VxCb2pm)", true)
+            .setDescription("Vous voulez inviter le bot ?")
+            .addField("Lien","Voici le lien d'invitation [ICI](https://discordapp.com/oauth2/authorize?client_id=494833756331573248&scope=bot&permissions=8)", true)
             .setColor("0xFF0000")
-            .setFooter("Bievenue à vous ! ")
-        message.channel.sendEmbed(invite);
+            .setFooter("Merci de votre confiance ! :) ")
+        message.channel.sendEmbed(embed);
     }
 });
