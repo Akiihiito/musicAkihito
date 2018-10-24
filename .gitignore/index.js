@@ -15,7 +15,7 @@ bot.on('ready', function() {
     console.log("Connectedç");
 });
 
-bot.login("MzM2OTI5NzU3MTMwMzkxNTcy.Do-zhw.dwtp41eRTMBlBe8exGYLirwLa0s");
+bot.login(process.env.TOKEN);
 
 bot.on('message', message=> {
     if (message.content === prefix + "help"){
